@@ -152,7 +152,8 @@ class ViewController: UIViewController {
                 }
             }
             
-            println("There are \(todayCustomersArray.count) customers, and \(paidCustomer) of them paid due to the same mix taste")
+            //println("There are \(todayCustomersArray.count) customers, and \(paidCustomer) of them paid due to the same mix taste")
+            resultsLabel.text =  "Today summary:\n👉 Purchased \(todayPurchase.lemons) lemons and \(todayPurchase.iceCubes) ice cubes.\n👉 Today's mix is \(todayMix.lemonadeType)\n👉 \(paidCustomer) of \(todayCustomersArray.count) customers paid"
             
             var moneyInTotal = todaySupply.money
             resetGame()
@@ -169,6 +170,12 @@ class ViewController: UIViewController {
             }
             
         }
+    }
+    
+    @IBAction func resetButtonPressed(sender: UIButton) {
+        resetGame()
+        updateRegions()
+        resultsLabel.text = "Rule: you will either make or lose money at the end of the day. If you don't have enough money, you lose the game."
     }
     
     override func viewDidLoad() {

@@ -196,15 +196,6 @@
                                     <rect key="frame" x="75" y="244" width="232" height="54"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule: you will either make or lose money at the end of the day. If you don't have enough money, you lose the game." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A25-l7-OOU">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="392" width="246" height="83"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAO-te-Nqa">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="+">
@@ -306,12 +297,36 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="498" width="165" height="56"/>
+                                    <rect key="frame" x="16" y="498" width="165" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="startDayPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vqp-3g-2se"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G47-yd-0yR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="204" y="498" width="100" height="56"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fKW-v3-Stb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule: you will either make or lose money at the end of the day. If you don't have enough money, you lose the game." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A25-l7-OOU">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="392" width="305" height="98"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -335,7 +350,6 @@
                                 <exclude reference="ULZ-N7-ydS"/>
                                 <exclude reference="c1T-1b-t7e"/>
                                 <exclude reference="JUA-pB-fSS"/>
-                                <exclude reference="A25-l7-OOU"/>
                                 <exclude reference="aAO-te-Nqa"/>
                                 <exclude reference="Uc0-Rd-NQk"/>
                                 <exclude reference="6Bf-eD-86N"/>
@@ -345,6 +359,8 @@
                                 <exclude reference="feh-dI-1gq"/>
                                 <exclude reference="1s9-lg-ICZ"/>
                                 <exclude reference="W9w-0j-qic"/>
+                                <exclude reference="G47-yd-0yR"/>
+                                <exclude reference="A25-l7-OOU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -368,7 +384,6 @@
                                 <include reference="ULZ-N7-ydS"/>
                                 <include reference="c1T-1b-t7e"/>
                                 <include reference="JUA-pB-fSS"/>
-                                <include reference="A25-l7-OOU"/>
                                 <include reference="aAO-te-Nqa"/>
                                 <include reference="Uc0-Rd-NQk"/>
                                 <include reference="6Bf-eD-86N"/>
@@ -378,6 +393,8 @@
                                 <include reference="feh-dI-1gq"/>
                                 <include reference="1s9-lg-ICZ"/>
                                 <include reference="W9w-0j-qic"/>
+                                <include reference="G47-yd-0yR"/>
+                                <include reference="A25-l7-OOU"/>
                             </mask>
                         </variation>
                     </view>

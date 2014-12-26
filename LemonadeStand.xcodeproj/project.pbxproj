@@ -16,6 +16,8 @@
 		A7A9A7591A4CEC8000448FCF /* Supplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A7581A4CEC8000448FCF /* Supplies.swift */; };
 		A7A9A75B1A4CED9C00448FCF /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A75A1A4CED9C00448FCF /* Purchase.swift */; };
 		A7A9A75D1A4D01F000448FCF /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A75C1A4D01F000448FCF /* Mix.swift */; };
+		A7A9A75F1A4D18F600448FCF /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A75E1A4D18F600448FCF /* Customer.swift */; };
+		A7A9A7611A4D26BA00448FCF /* CustomerArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A7601A4D26BA00448FCF /* CustomerArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		A7A9A7581A4CEC8000448FCF /* Supplies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplies.swift; sourceTree = "<group>"; };
 		A7A9A75A1A4CED9C00448FCF /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		A7A9A75C1A4D01F000448FCF /* Mix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
+		A7A9A75E1A4D18F600448FCF /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		A7A9A7601A4D26BA00448FCF /* CustomerArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			children = (
 				A7661D801A4CDE3100FF8804 /* AppDelegate.swift */,
 				A7661D821A4CDE3100FF8804 /* ViewController.swift */,
+				A7A9A7601A4D26BA00448FCF /* CustomerArray.swift */,
+				A7A9A75E1A4D18F600448FCF /* Customer.swift */,
 				A7A9A75C1A4D01F000448FCF /* Mix.swift */,
 				A7A9A7581A4CEC8000448FCF /* Supplies.swift */,
 				A7A9A75A1A4CED9C00448FCF /* Purchase.swift */,
@@ -222,8 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7A9A75B1A4CED9C00448FCF /* Purchase.swift in Sources */,
+				A7A9A7611A4D26BA00448FCF /* CustomerArray.swift in Sources */,
 				A7661D831A4CDE3100FF8804 /* ViewController.swift in Sources */,
 				A7A9A7591A4CEC8000448FCF /* Supplies.swift in Sources */,
+				A7A9A75F1A4D18F600448FCF /* Customer.swift in Sources */,
 				A7661D811A4CDE3100FF8804 /* AppDelegate.swift in Sources */,
 				A7A9A75D1A4D01F000448FCF /* Mix.swift in Sources */,
 			);

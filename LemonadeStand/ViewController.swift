@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     // Variables
-    var todaySupply = Supplies(aMoney: 10, aLemons: 20, aIceCubes: 30)
+    var todaySupply = Supplies(aMoney: 10, aLemons: 1, aIceCubes: 1)
     var todayPurchase = Purchase(initLemons: 0, initIceCubes: 0)
     var todayMix = Mix(alemons: 0, aIceCubes: 0)
+    var todayCustomersArray:[Customer] = []
     
     
     // Constants
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lemonsForMix: UILabel!
     @IBOutlet weak var iceCubesForMix: UILabel!
+    
+    @IBOutlet weak var resultsLabel: UILabel!
     
     @IBAction func purchaseMoreLemonsPressed(sender: UIButton) {
         if todaySupply.money < 2 {
@@ -131,11 +134,47 @@ class ViewController: UIViewController {
         // Update region
         updateRegions()
     }
-
+    
+    @IBAction func startDayPressed(sender: UIButton) {
+        if todayMix.lemonadeRatio != nil {
+            
+            todayCustomersArray = CustomerArray.createArray()
+            var paidCustomer = 0
+            for var index = 0; index < todayCustomersArray.count; ++index {
+                var currentCustomer = todayCustomersArray[index]
+                
+                if currentCustomer.tasteType == todayMix.lemonadeType {
+                    //println("Customer \(index) prefers \(currentCustomer.tasteType) and today mix is also \(todayMix.lemonadeType), so he paid")
+                    todaySupply.money += 1
+                    ++paidCustomer
+                } else {
+                    //println("Customer \(index) prefers \(currentCustomer.tasteType) but today mix is \(todayMix.lemonadeType), so he bailed")
+                }
+            }
+            
+            println("There are \(todayCustomersArray.count) customers, and \(paidCustomer) of them paid due to the same mix taste")
+            
+            var moneyInTotal = todaySupply.money
+            resetGame()
+            todaySupply.money = moneyInTotal
+            updateRegions()
+            
+        } else {
+            if todayMix.lemons == 0 && todayMix.iceCubes != 0 {
+                showAlertWithText(header: "ERROR", message: "You haven't made any lemonade mix yet! You need lemons :)")
+            } else if todayMix.iceCubes == 0 && todayMix.lemons != 0 {
+                showAlertWithText(header: "ERROR", message: "You haven't made any lemonade mix yet! You need ice cubes :)")
+            } else {
+                showAlertWithText(header: "ERROR", message: "You haven't made any lemonade mix yet! You need lemons and ice cubes :)")
+            }
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        resetGame()
         updateRegions()
     }
 
@@ -176,7 +215,20 @@ class ViewController: UIViewController {
             }
             
             println("Current mix ratio is \(todayMix.lemonadeRatio) and type is \(todayMix.lemonadeType)")
+        } else {
+            todayMix.lemonadeRatio = nil
         }
+    }
+    
+    func resetGame() {
+        // Initialize purchase, mix, and supply
+        todayPurchase.lemons = 0
+        todayPurchase.iceCubes = 0
+        todayMix.iceCubes = 0
+        todayMix.lemons = 0
+        todaySupply.lemons = 1
+        todaySupply.iceCubes = 1
+        todaySupply.money = 10
     }
 
 }

@@ -241,16 +241,17 @@
                                     <action selector="mixMoreIceCubesPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nih-xC-HAf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-0j-qic">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-Iy-L8y">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Start Day">
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="498" width="165" height="56"/>
+                                    <rect key="frame" x="261" y="325" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="mixFewerIceCubesPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RWG-Ck-dMu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga9-lO-WWv">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -297,16 +298,18 @@
                                     <action selector="mixFewerLemonsPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uwx-yt-p11"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-Iy-L8y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-0j-qic">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="-">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start Day">
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="261" y="325" width="46" height="30"/>
+                                    <rect key="frame" x="75" y="498" width="165" height="56"/>
                                 </variation>
                                 <connections>
-                                    <action selector="mixFewerIceCubesPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RWG-Ck-dMu"/>
+                                    <action selector="startDayPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vqp-3g-2se"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -336,12 +339,12 @@
                                 <exclude reference="aAO-te-Nqa"/>
                                 <exclude reference="Uc0-Rd-NQk"/>
                                 <exclude reference="6Bf-eD-86N"/>
-                                <exclude reference="W9w-0j-qic"/>
+                                <exclude reference="m3D-Iy-L8y"/>
                                 <exclude reference="Ga9-lO-WWv"/>
                                 <exclude reference="qNd-Cw-BEN"/>
                                 <exclude reference="feh-dI-1gq"/>
                                 <exclude reference="1s9-lg-ICZ"/>
-                                <exclude reference="m3D-Iy-L8y"/>
+                                <exclude reference="W9w-0j-qic"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -369,12 +372,12 @@
                                 <include reference="aAO-te-Nqa"/>
                                 <include reference="Uc0-Rd-NQk"/>
                                 <include reference="6Bf-eD-86N"/>
-                                <include reference="W9w-0j-qic"/>
+                                <include reference="m3D-Iy-L8y"/>
                                 <include reference="Ga9-lO-WWv"/>
                                 <include reference="qNd-Cw-BEN"/>
                                 <include reference="feh-dI-1gq"/>
                                 <include reference="1s9-lg-ICZ"/>
-                                <include reference="m3D-Iy-L8y"/>
+                                <include reference="W9w-0j-qic"/>
                             </mask>
                         </variation>
                     </view>
@@ -383,6 +386,7 @@
                         <outlet property="lemonsForMix" destination="yj1-Nz-2PH" id="XiI-dr-NtH"/>
                         <outlet property="purchasedIceCubes" destination="vcU-Zq-wiS" id="Y39-9Z-fy3"/>
                         <outlet property="purchasedLemons" destination="qbw-aS-P9j" id="rcK-HZ-KBM"/>
+                        <outlet property="resultsLabel" destination="A25-l7-OOU" id="i7U-7q-ZOm"/>
                         <outlet property="totalIceCubes" destination="sDx-h4-TJf" id="cn9-Bn-J8T"/>
                         <outlet property="totalLemons" destination="XWl-a2-Xe4" id="Fsi-hr-4qa"/>
                         <outlet property="totalMoney" destination="APJ-Qg-oSD" id="ZuK-cy-HGn"/>

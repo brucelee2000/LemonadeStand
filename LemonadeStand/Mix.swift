@@ -12,7 +12,7 @@ import UIKit
 struct Mix {
     var lemons = 0
     var iceCubes = 0
-    var lemonadeRatio = 0.0
+    var lemonadeRatio:Double?
     var lemonadeType:String = ""
     
     init(alemons:Int, aIceCubes:Int) {

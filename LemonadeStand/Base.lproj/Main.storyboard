@@ -196,6 +196,15 @@
                                     <rect key="frame" x="75" y="244" width="232" height="54"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule: you will either make or lose money at the end of the day. If you don't have enough money, you lose the game." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A25-l7-OOU">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="392" width="305" height="98"/>
+                                </variation>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAO-te-Nqa">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="+">
@@ -252,7 +261,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="113" width="400" height="5"/>
+                                    <rect key="frame" x="0.0" y="116" width="400" height="5"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNd-Cw-BEN">
@@ -318,15 +327,12 @@
                                     <action selector="resetButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fKW-v3-Stb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule: you will either make or lose money at the end of the day. If you don't have enough money, you lose the game." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A25-l7-OOU">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mild" translatesAutoresizingMaskIntoConstraints="NO" id="jOL-x4-o8f">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="392" width="305" height="98"/>
+                                    <rect key="frame" x="26" y="48" width="60" height="60"/>
                                 </variation>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -350,6 +356,7 @@
                                 <exclude reference="ULZ-N7-ydS"/>
                                 <exclude reference="c1T-1b-t7e"/>
                                 <exclude reference="JUA-pB-fSS"/>
+                                <exclude reference="A25-l7-OOU"/>
                                 <exclude reference="aAO-te-Nqa"/>
                                 <exclude reference="Uc0-Rd-NQk"/>
                                 <exclude reference="6Bf-eD-86N"/>
@@ -360,7 +367,7 @@
                                 <exclude reference="1s9-lg-ICZ"/>
                                 <exclude reference="W9w-0j-qic"/>
                                 <exclude reference="G47-yd-0yR"/>
-                                <exclude reference="A25-l7-OOU"/>
+                                <exclude reference="jOL-x4-o8f"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -384,6 +391,7 @@
                                 <include reference="ULZ-N7-ydS"/>
                                 <include reference="c1T-1b-t7e"/>
                                 <include reference="JUA-pB-fSS"/>
+                                <include reference="A25-l7-OOU"/>
                                 <include reference="aAO-te-Nqa"/>
                                 <include reference="Uc0-Rd-NQk"/>
                                 <include reference="6Bf-eD-86N"/>
@@ -394,7 +402,7 @@
                                 <include reference="1s9-lg-ICZ"/>
                                 <include reference="W9w-0j-qic"/>
                                 <include reference="G47-yd-0yR"/>
-                                <include reference="A25-l7-OOU"/>
+                                <include reference="jOL-x4-o8f"/>
                             </mask>
                         </variation>
                     </view>
@@ -407,6 +415,7 @@
                         <outlet property="totalIceCubes" destination="sDx-h4-TJf" id="cn9-Bn-J8T"/>
                         <outlet property="totalLemons" destination="XWl-a2-Xe4" id="Fsi-hr-4qa"/>
                         <outlet property="totalMoney" destination="APJ-Qg-oSD" id="ZuK-cy-HGn"/>
+                        <outlet property="weatherImage" destination="jOL-x4-o8f" id="z5Q-I6-McG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -414,4 +423,7 @@
             <point key="canvasLocation" x="564" y="445"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Mild" width="60" height="60"/>
+    </resources>
 </document>

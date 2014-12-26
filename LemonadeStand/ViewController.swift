@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var todayPurchase = Purchase(initLemons: 0, initIceCubes: 0)
     var todayMix = Mix(alemons: 0, aIceCubes: 0)
     var todayCustomersArray:[Customer] = []
+    var todayWeather = "Mild"
     
     
     // Constants
@@ -33,6 +34,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var iceCubesForMix: UILabel!
     
     @IBOutlet weak var resultsLabel: UILabel!
+    
+    @IBOutlet weak var weatherImage: UIImageView!
     
     @IBAction func purchaseMoreLemonsPressed(sender: UIButton) {
         if todaySupply.money < 2 {
@@ -138,7 +141,7 @@ class ViewController: UIViewController {
     @IBAction func startDayPressed(sender: UIButton) {
         if todayMix.lemonadeRatio != nil {
             
-            todayCustomersArray = CustomerArray.createArray()
+            todayCustomersArray = CustomerArray.createArray(todayWeather)
             var paidCustomer = 0
             for var index = 0; index < todayCustomersArray.count; ++index {
                 var currentCustomer = todayCustomersArray[index]
@@ -153,10 +156,11 @@ class ViewController: UIViewController {
             }
             
             //println("There are \(todayCustomersArray.count) customers, and \(paidCustomer) of them paid due to the same mix taste")
-            resultsLabel.text =  "Today summary:\n👉 Purchased \(todayPurchase.lemons) lemons and \(todayPurchase.iceCubes) ice cubes.\n👉 Today's mix is \(todayMix.lemonadeType)\n👉 \(paidCustomer) of \(todayCustomersArray.count) customers paid"
+            resultsLabel.text =  "Today is \(todayWeather):\n👉 Purchased \(todayPurchase.lemons) lemons and \(todayPurchase.iceCubes) ice cubes.\n👉 Today's mix is \(todayMix.lemonadeType)\n👉 \(paidCustomer) of \(todayCustomersArray.count) customers paid"
             
             var moneyInTotal = todaySupply.money
             resetGame()
+            updateWeather()
             todaySupply.money = moneyInTotal
             updateRegions()
             
@@ -221,7 +225,7 @@ class ViewController: UIViewController {
                 todayMix.lemonadeType = "Equal Portioned Lemonade"
             }
             
-            println("Current mix ratio is \(todayMix.lemonadeRatio) and type is \(todayMix.lemonadeType)")
+            //println("Current mix ratio is \(todayMix.lemonadeRatio) and type is \(todayMix.lemonadeType)")
         } else {
             todayMix.lemonadeRatio = nil
         }
@@ -236,6 +240,21 @@ class ViewController: UIViewController {
         todaySupply.lemons = 1
         todaySupply.iceCubes = 1
         todaySupply.money = 10
+        // Update weather
+        updateWeather()
+    }
+    
+    func updateWeather() {
+        let weather = Int(arc4random_uniform(UInt32(3)))
+        switch weather {
+        case 0:
+            todayWeather = "Mild"
+        case 1:
+            todayWeather = "Cold"
+        default:
+            todayWeather = "Warm"
+        }
+        weatherImage.image = UIImage(named: todayWeather)
     }
 
 }

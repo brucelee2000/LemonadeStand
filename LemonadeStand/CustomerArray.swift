@@ -11,10 +11,20 @@ import UIKit
 
 class CustomerArray {
     // Create a customer array with randome taste for each people
-    class func createArray() -> [Customer] {
+    class func createArray(weather:String) -> [Customer] {
         var customers:[Customer] = []
         
-        let customerNumber = Int(arc4random_uniform(UInt32(10)))
+        var customerNumber = Int(arc4random_uniform(UInt32(10)))
+        
+        switch weather {
+        case "Cold":
+            customerNumber -= 3
+        case "Warm":
+            customerNumber += 4
+        default:
+            customerNumber += 0
+        }
+        
         for var index = 0; index < customerNumber; ++index {
             let customerPreference = Double(arc4random_uniform(UInt32(10))) / 10.0
             var customer = Customer(customerTaste: customerPreference)
@@ -32,4 +42,5 @@ class CustomerArray {
         
         return customers
     }
+
 }

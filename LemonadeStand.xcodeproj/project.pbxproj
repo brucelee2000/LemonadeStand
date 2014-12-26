@@ -13,6 +13,9 @@
 		A7661D881A4CDE3100FF8804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7661D871A4CDE3100FF8804 /* Images.xcassets */; };
 		A7661D8B1A4CDE3100FF8804 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7661D891A4CDE3100FF8804 /* LaunchScreen.xib */; };
 		A7661D971A4CDE3100FF8804 /* LemonadeStandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7661D961A4CDE3100FF8804 /* LemonadeStandTests.swift */; };
+		A7A9A7591A4CEC8000448FCF /* Supplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A7581A4CEC8000448FCF /* Supplies.swift */; };
+		A7A9A75B1A4CED9C00448FCF /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A75A1A4CED9C00448FCF /* Purchase.swift */; };
+		A7A9A75D1A4D01F000448FCF /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9A75C1A4D01F000448FCF /* Mix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		A7661D901A4CDE3100FF8804 /* LemonadeStandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonadeStandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7661D951A4CDE3100FF8804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7661D961A4CDE3100FF8804 /* LemonadeStandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonadeStandTests.swift; sourceTree = "<group>"; };
+		A7A9A7581A4CEC8000448FCF /* Supplies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplies.swift; sourceTree = "<group>"; };
+		A7A9A75A1A4CED9C00448FCF /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		A7A9A75C1A4D01F000448FCF /* Mix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 			children = (
 				A7661D801A4CDE3100FF8804 /* AppDelegate.swift */,
 				A7661D821A4CDE3100FF8804 /* ViewController.swift */,
+				A7A9A75C1A4D01F000448FCF /* Mix.swift */,
+				A7A9A7581A4CEC8000448FCF /* Supplies.swift */,
+				A7A9A75A1A4CED9C00448FCF /* Purchase.swift */,
 				A7661D841A4CDE3100FF8804 /* Main.storyboard */,
 				A7661D871A4CDE3100FF8804 /* Images.xcassets */,
 				A7661D891A4CDE3100FF8804 /* LaunchScreen.xib */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A9A75B1A4CED9C00448FCF /* Purchase.swift in Sources */,
 				A7661D831A4CDE3100FF8804 /* ViewController.swift in Sources */,
+				A7A9A7591A4CEC8000448FCF /* Supplies.swift in Sources */,
 				A7661D811A4CDE3100FF8804 /* AppDelegate.swift in Sources */,
+				A7A9A75D1A4D01F000448FCF /* Mix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				A7661D9C1A4CDE3100FF8804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7661D9D1A4CDE3100FF8804 /* Build configuration list for PBXNativeTarget "LemonadeStandTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				A7661D9F1A4CDE3100FF8804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

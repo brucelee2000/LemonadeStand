@@ -96,6 +96,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="261" y="151" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="purchaseFewerLemonsPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wwh-rB-TC8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuX-43-rGQ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -105,6 +108,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="261" y="180" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="purchaseFewerIceCubesPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wiw-x0-kVM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25q-1S-2uC">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -114,6 +120,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="201" y="180" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="purchaseMoreIceCubesPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jQO-9O-fNg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbw-aS-P9j">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -204,6 +213,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="201" y="151" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="purchaseMoreLemonsPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hLd-x1-lpG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc0-Rd-NQk">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -213,6 +225,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="201" y="295" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="mixMoreLemonsPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ab2-Po-rYC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-eD-86N">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -222,24 +237,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="201" y="325" width="46" height="30"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-Iy-L8y">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="-">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="261" y="325" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-lg-ICZ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="-">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="261" y="295" width="46" height="30"/>
-                                </variation>
+                                <connections>
+                                    <action selector="mixMoreIceCubesPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nih-xC-HAf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-0j-qic">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -285,6 +285,30 @@
                                     <rect key="frame" x="0.0" y="357" width="400" height="5"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-lg-ICZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="261" y="295" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="mixFewerLemonsPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uwx-yt-p11"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-Iy-L8y">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="261" y="325" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="mixFewerIceCubesPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RWG-Ck-dMu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -312,12 +336,12 @@
                                 <exclude reference="aAO-te-Nqa"/>
                                 <exclude reference="Uc0-Rd-NQk"/>
                                 <exclude reference="6Bf-eD-86N"/>
-                                <exclude reference="m3D-Iy-L8y"/>
-                                <exclude reference="1s9-lg-ICZ"/>
                                 <exclude reference="W9w-0j-qic"/>
                                 <exclude reference="Ga9-lO-WWv"/>
                                 <exclude reference="qNd-Cw-BEN"/>
                                 <exclude reference="feh-dI-1gq"/>
+                                <exclude reference="1s9-lg-ICZ"/>
+                                <exclude reference="m3D-Iy-L8y"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -345,15 +369,24 @@
                                 <include reference="aAO-te-Nqa"/>
                                 <include reference="Uc0-Rd-NQk"/>
                                 <include reference="6Bf-eD-86N"/>
-                                <include reference="m3D-Iy-L8y"/>
-                                <include reference="1s9-lg-ICZ"/>
                                 <include reference="W9w-0j-qic"/>
                                 <include reference="Ga9-lO-WWv"/>
                                 <include reference="qNd-Cw-BEN"/>
                                 <include reference="feh-dI-1gq"/>
+                                <include reference="1s9-lg-ICZ"/>
+                                <include reference="m3D-Iy-L8y"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="iceCubesForMix" destination="UFf-DK-k6k" id="lSU-9A-zcw"/>
+                        <outlet property="lemonsForMix" destination="yj1-Nz-2PH" id="XiI-dr-NtH"/>
+                        <outlet property="purchasedIceCubes" destination="vcU-Zq-wiS" id="Y39-9Z-fy3"/>
+                        <outlet property="purchasedLemons" destination="qbw-aS-P9j" id="rcK-HZ-KBM"/>
+                        <outlet property="totalIceCubes" destination="sDx-h4-TJf" id="cn9-Bn-J8T"/>
+                        <outlet property="totalLemons" destination="XWl-a2-Xe4" id="Fsi-hr-4qa"/>
+                        <outlet property="totalMoney" destination="APJ-Qg-oSD" id="ZuK-cy-HGn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

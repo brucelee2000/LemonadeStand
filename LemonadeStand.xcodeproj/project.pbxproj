@@ -89,12 +89,8 @@
 			children = (
 				A7661D801A4CDE3100FF8804 /* AppDelegate.swift */,
 				A7661D821A4CDE3100FF8804 /* ViewController.swift */,
-				A7A9A7601A4D26BA00448FCF /* CustomerArray.swift */,
-				A7A9A75E1A4D18F600448FCF /* Customer.swift */,
-				A7A9A75C1A4D01F000448FCF /* Mix.swift */,
-				A7A9A7581A4CEC8000448FCF /* Supplies.swift */,
-				A7A9A75A1A4CED9C00448FCF /* Purchase.swift */,
 				A7661D841A4CDE3100FF8804 /* Main.storyboard */,
+				A76B36991A4E2F45006895A5 /* Models */,
 				A7661D871A4CDE3100FF8804 /* Images.xcassets */,
 				A7661D891A4CDE3100FF8804 /* LaunchScreen.xib */,
 				A7661D7E1A4CDE3100FF8804 /* Supporting Files */,
@@ -125,6 +121,18 @@
 				A7661D951A4CDE3100FF8804 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A76B36991A4E2F45006895A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7A9A7601A4D26BA00448FCF /* CustomerArray.swift */,
+				A7A9A75E1A4D18F600448FCF /* Customer.swift */,
+				A7A9A75C1A4D01F000448FCF /* Mix.swift */,
+				A7A9A7581A4CEC8000448FCF /* Supplies.swift */,
+				A7A9A75A1A4CED9C00448FCF /* Purchase.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

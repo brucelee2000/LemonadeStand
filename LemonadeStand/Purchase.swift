@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 
 struct Purchase {
+    var lemonPrice = 2
+    var iceCubePrice = 1
+    
     var lemons = 0
     var iceCubes = 0
+    
     
     init(initLemons:Int, initIceCubes:Int) {
         lemons = initLemons

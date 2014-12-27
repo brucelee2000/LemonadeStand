@@ -25,7 +25,8 @@ class CustomerArray {
             customerNumber += 0
         }
         
-        for var index = 0; index < customerNumber; ++index {
+        //for var index = 0; index < customerNumber; ++index {
+        for index in 0...customerNumber - 1 {
             let customerPreference = Double(arc4random_uniform(UInt32(10))) / 10.0
             var customer = Customer(customerTaste: customerPreference)
             

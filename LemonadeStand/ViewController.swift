@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     
     
     // Constants
-    let kLemonPrice = 2
-    let kIceCubePrice = 1
+    //let kLemonPrice = 2
+    //let kIceCubePrice = 1
     
     // UI elements to update
     @IBOutlet weak var totalMoney: UILabel!
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         } else {
             todayPurchase.lemons += 1
             todaySupply.lemons += 1
-            todaySupply.money -= kLemonPrice
+            todaySupply.money -= todayPurchase.lemonPrice
         }
         
         // Update region
@@ -51,12 +51,12 @@ class ViewController: UIViewController {
     }
   
     @IBAction func purchaseFewerLemonsPressed(sender: UIButton) {
-        if todayPurchase.lemons < kLemonPrice {
+        if todayPurchase.lemons < todayPurchase.lemonPrice {
             showAlertWithText(header: "ERROR", message: "You already have no lemons today")
         } else {
             todayPurchase.lemons -= 1
             todaySupply.lemons -= 1
-            todaySupply.money += kLemonPrice
+            todaySupply.money += todayPurchase.lemonPrice
         }
         
         // Update region
@@ -64,12 +64,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func purchaseMoreIceCubesPressed(sender: UIButton) {
-        if todaySupply.money < kIceCubePrice {
+        if todaySupply.money < todayPurchase.iceCubePrice {
             showAlertWithText(header: "Not Enough Money", message: "You cannot buy ice cubes any more")
         } else {
             todayPurchase.iceCubes += 1
             todaySupply.iceCubes += 1
-            todaySupply.money -= kIceCubePrice
+            todaySupply.money -= todayPurchase.iceCubePrice
         }
         
         // Update region
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         } else {
             todayPurchase.iceCubes -= 1
             todaySupply.iceCubes -= 1
-            todaySupply.money += kIceCubePrice
+            todaySupply.money += todayPurchase.iceCubePrice
         }
         
         // Update region
@@ -143,7 +143,8 @@ class ViewController: UIViewController {
             
             todayCustomersArray = CustomerArray.createArray(todayWeather)
             var paidCustomer = 0
-            for var index = 0; index < todayCustomersArray.count; ++index {
+            //for var index = 0; index < todayCustomersArray.count; ++index {
+            for index in 0...todayCustomersArray.count - 1 {
                 var currentCustomer = todayCustomersArray[index]
                 
                 if currentCustomer.tasteType == todayMix.lemonadeType {
